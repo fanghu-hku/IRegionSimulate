@@ -2,7 +2,7 @@
 A pipeline to simulate mutations within customized regions.
 This pipleline will first generate shell script for each sample to be simulated, then users can run the simulation shell for each sample separately.
 
-## 1, Procedures to generate simulation scripes are packaged in IRegionSimulate.sh. 
+# 1, Procedures to generate simulation scripes are packaged in IRegionSimulate.sh. 
 ```R
 bash IRegionSimulate.sh customized_region.bed bed_list simulate_num
 customized_region.bed: customized region in BED format.
@@ -38,7 +38,7 @@ perl get_Rscript.pl "$wd/result" $sap $simul_num
 done
 echo =====Finish at `date` =====
 ```
-## 2, Run simulation script for each sample.
+# 2, Run simulation script for each sample.
 ```R
 for i in `cat sap.sh.list`;do `bash $i &>$i.o &`;done
 ```
